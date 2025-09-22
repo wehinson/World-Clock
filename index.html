@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>World Clock — CommonNinja</title>
+  <meta name="robots" content="noindex">
+  <style>
+    html, body { margin:0; padding:0; height:100%; background:#f7f7f7; }
+    .wrap { min-height:100%; display:grid; place-items:center; padding:24px; }
+    .card {
+      width: 100%;
+      max-width: 1100px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,.06);
+      padding: 16px;
+    }
+    .notice {
+      display: none;
+      font: 14px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #b00020;
+      background: #fff3f3;
+      border: 1px solid #f0caca;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div id="cn-warning" class="notice">
+        If you see an empty space below, make sure the CommonNinja project allows the domain <code>wehinson.github.io</code> (Dashboard → Project Settings → Allowed Domains).
+      </div>
+      <div class="commonninja_component pid-f37791f8-609c-4262-9677-63df6421362a"></div>
+      <noscript>
+        <p style="font:14px/1.5 system-ui; color:#444; margin-top:16px;">
+          JavaScript is disabled. Enable it to load the CommonNinja widget.
+        </p>
+      </noscript>
+    </div>
+  </div>
+
+  <script>
+    // Show the domain warning if the widget doesn't initialize within ~3s.
+    window.addEventListener('load', function() {
+      setTimeout(function(){
+        var el = document.getElementById('cn-warning');
+        if (el && !document.querySelector('.commonninja_attribution, .commonninja-iframe, .cn-app-root')) {
+          el.style.display = 'block';
+        }
+      }, 3000);
+    });
+  </script>
+  <script src="https://cdn.commonninja.com/sdk/latest/commonninja.js" defer></script>
+</body>
+</html>
